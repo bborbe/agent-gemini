@@ -18,8 +18,8 @@ import (
 	"github.com/bborbe/service"
 	"github.com/bborbe/vault-cli/pkg/domain"
 
-	"github.com/bborbe/agent/agent/gemini/pkg/factory"
-	"github.com/bborbe/agent/agent/gemini/pkg/parser"
+	"github.com/bborbe/agent-gemini/pkg/factory"
+	"github.com/bborbe/agent-gemini/pkg/parser"
 	agentlib "github.com/bborbe/agent/lib"
 )
 

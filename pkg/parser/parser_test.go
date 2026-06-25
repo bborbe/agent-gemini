@@ -13,7 +13,7 @@ import (
 	. "github.com/onsi/gomega"
 	"google.golang.org/genai"
 
-	"github.com/bborbe/agent/agent/gemini/pkg/parser"
+	"github.com/bborbe/agent-gemini/pkg/parser"
 )
 
 // testPlan is a test struct for schema building tests.

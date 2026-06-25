@@ -10,7 +10,7 @@ import (
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
 
-	"github.com/bborbe/agent/agent/gemini/pkg/factory"
+	"github.com/bborbe/agent-gemini/pkg/factory"
 	agentlib "github.com/bborbe/agent/lib"
 )
 

@@ -14,7 +14,7 @@ import (
 	libtime "github.com/bborbe/time"
 	"github.com/bborbe/vault-cli/pkg/domain"
 
-	"github.com/bborbe/agent/agent/gemini/pkg/steps"
+	"github.com/bborbe/agent-gemini/pkg/steps"
 	agentlib "github.com/bborbe/agent/lib"
 	delivery "github.com/bborbe/agent/lib/delivery"
 	healthcheck "github.com/bborbe/agent/lib/healthcheck"
