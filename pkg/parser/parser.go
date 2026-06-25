@@ -19,11 +19,10 @@ import (
 	"reflect"
 	"strings"
 
+	libdelivery "github.com/bborbe/agent/lib/delivery"
 	"github.com/bborbe/errors"
 	"github.com/golang/glog"
 	"google.golang.org/genai"
-
-	libdelivery "github.com/bborbe/agent/lib/delivery"
 )
 
 // Parser implements agentlib.AIParser via the Gemini API.

@@ -13,6 +13,7 @@ import (
 	"context"
 	"os"
 
+	agentlib "github.com/bborbe/agent/lib"
 	"github.com/bborbe/errors"
 	libsentry "github.com/bborbe/sentry"
 	"github.com/bborbe/service"
@@ -20,7 +21,6 @@ import (
 
 	"github.com/bborbe/agent-gemini/pkg/factory"
 	"github.com/bborbe/agent-gemini/pkg/parser"
-	agentlib "github.com/bborbe/agent/lib"
 )
 
 func main() {

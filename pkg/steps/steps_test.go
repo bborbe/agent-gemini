@@ -10,11 +10,10 @@ import (
 	"testing"
 	"time"
 
+	agentlib "github.com/bborbe/agent/lib"
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
 	"github.com/onsi/gomega/format"
-
-	agentlib "github.com/bborbe/agent/lib"
 )
 
 func TestSteps(t *testing.T) {

@@ -17,9 +17,8 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/bborbe/errors"
-
 	agentlib "github.com/bborbe/agent/lib"
+	"github.com/bborbe/errors"
 )
 
 // Plan is the planning-phase output. Populated by Gemini from fuzzy
