@@ -24,9 +24,9 @@ import (
 	"os"
 	"time"
 
-	agentlib "github.com/bborbe/agent/lib"
-	delivery "github.com/bborbe/agent/lib/delivery"
-	libmetrics "github.com/bborbe/agent/lib/metrics"
+	agentlib "github.com/bborbe/agent"
+	delivery "github.com/bborbe/agent/delivery"
+	libmetrics "github.com/bborbe/agent/metrics"
 	"github.com/bborbe/cqrs/base"
 	"github.com/bborbe/errors"
 	libkafka "github.com/bborbe/kafka"

@@ -19,7 +19,7 @@ import (
 	"reflect"
 	"strings"
 
-	libdelivery "github.com/bborbe/agent/lib/delivery"
+	libdelivery "github.com/bborbe/agent/delivery"
 	"github.com/bborbe/errors"
 	"github.com/golang/glog"
 	"google.golang.org/genai"
