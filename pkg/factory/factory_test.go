@@ -8,6 +8,9 @@ import (
 	"context"
 
 	agentlib "github.com/bborbe/agent"
+	"github.com/bborbe/cqrs/base"
+	kafkamocks "github.com/bborbe/kafka/mocks"
+	libtime "github.com/bborbe/time"
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
 
@@ -57,4 +60,35 @@ var _ = Describe("CreateAgentProvider", func() {
 			Entry("empty value", agentlib.TaskType(""), `""`),
 		)
 	})
+})
+
+var _ = Describe("CreateKafkaResultDeliverer", func() {
+	DescribeTable(
+		"publishes the task update to the topic derived from the topic prefix",
+		func(topicPrefix base.TopicPrefix, expectedTopic string) {
+			ctx := context.Background()
+			fakeProducer := &kafkamocks.KafkaSyncProducer{}
+
+			deliverer := factory.CreateKafkaResultDeliverer(
+				fakeProducer,
+				topicPrefix,
+				agentlib.TaskIdentifier("task-1"),
+				"## Plan\n\nsome content\n",
+				libtime.NewCurrentDateTime(),
+			)
+
+			err := deliverer.DeliverResult(ctx, agentlib.AgentResultInfo{
+				Status: agentlib.AgentStatusDone,
+				Output: "## Plan\n\nsome content\n",
+			})
+			Expect(err).To(BeNil())
+
+			Expect(fakeProducer.SendMessageCallCount()).To(Equal(1))
+			_, msg := fakeProducer.SendMessageArgsForCall(0)
+			Expect(msg.Topic).To(Equal(expectedTopic))
+		},
+		Entry("develop prefix", base.TopicPrefix("develop"), "develop-agent-task-v1-request"),
+		Entry("master prefix", base.TopicPrefix("master"), "master-agent-task-v1-request"),
+		Entry("empty prefix", base.TopicPrefix(""), "agent-task-v1-request"),
+	)
 })
