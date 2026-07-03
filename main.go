@@ -56,10 +56,7 @@ type application struct {
 	// Task content from agent pipeline
 	TaskContent string `required:"true" arg:"task-content" env:"TASK_CONTENT" usage:"Raw task markdown from vault"`
 
-	// Branch for Kafka result delivery
-	Branch base.Branch `required:"false" arg:"branch" env:"BRANCH" usage:"branch"`
-
-	// TopicPrefix is an explicit Kafka topic prefix, independent of Branch.
+	// TopicPrefix is an explicit Kafka topic prefix; empty means unprefixed topics.
 	TopicPrefix base.TopicPrefix `arg:"topic-prefix" env:"TOPIC_PREFIX" usage:"Explicit Kafka topic prefix; empty means unprefixed topics"`
 
 	// Phase to run (framework requires explicit phase)
