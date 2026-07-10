@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## v0.1.2
+
+- Bump Go toolchain 1.26.4 -> 1.26.5 and Alpine 3.23 -> 3.24 in Dockerfile
+- Update bborbe/* and google.golang.org/genai dependencies
+- Ignore no-fix vuln advisory GO-2026-5932 in osv-scanner and trivy configs
+
 ## v0.1.1
 
 - refactor: converge build to bborbe/kafka-topic-reader publish-only model — make buca publishes docker.io/bborbe/agent-gemini:$(VERSION); deploy machinery removed.

@@ -1,0 +1,4 @@
+
+[[IgnoredVulns]]
+id = "GO-2026-5932"
+reason = "no-fix advisory — unmaintained/deprecated package"
