@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## Unreleased
+
+- Bump `golang.org/x/text` to v0.39.0 (CVE-2026-56852)
+
 ## v0.1.2
 
 - Bump Go toolchain 1.26.4 -> 1.26.5 and Alpine 3.23 -> 3.24 in Dockerfile
