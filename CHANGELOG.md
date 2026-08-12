@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## Unreleased
+
+- fix(deps): bump google.golang.org/grpc to v1.82.1 (GHSA-hrxh-6v49-42gf)
+
 ## v0.1.3
 
 - Bump `golang.org/x/text` to v0.39.0 (CVE-2026-56852)
