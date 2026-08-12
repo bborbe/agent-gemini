@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file.
 ## Unreleased
 
 - fix(deps): bump google.golang.org/grpc to v1.82.1 (GHSA-hrxh-6v49-42gf)
+- fix(deps): bump go.opentelemetry.io/otel to v1.44.0 (GO-2026-5158)
 
 ## v0.1.3
 
