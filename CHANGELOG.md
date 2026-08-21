@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## Unreleased
+
+- chore: Bump errcheck to v1.20.0 and golangci-lint to v2.13.1 for Go 1.27 support
+
 ## v0.1.5
 
 - update Go to 1.26.6 and update dependencies (GO-2026-5026, GO-2026-5972, GO-2026-6090, GO-2026-6218)
