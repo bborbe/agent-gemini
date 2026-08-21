@@ -95,7 +95,7 @@ func buildGenAISchema(ctx context.Context, target any) (*genai.Schema, error) {
 	if t == nil {
 		return &genai.Schema{Type: genai.TypeObject}, nil
 	}
-	for t.Kind() == reflect.Ptr {
+	for t.Kind() == reflect.Pointer {
 		t = t.Elem()
 	}
 	return buildSchemaForTypeAtDepth(ctx, t, 0)
@@ -113,7 +113,7 @@ func buildSchemaForTypeAtDepth(
 			maxSchemaDepth,
 		)
 	}
-	for t.Kind() == reflect.Ptr {
+	for t.Kind() == reflect.Pointer {
 		t = t.Elem()
 	}
 	switch t.Kind() {
