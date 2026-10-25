@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## Unreleased
+
+- chore: update github.com/bborbe/agent to v0.129.1, github.com/bborbe/cqrs to v0.6.13, github.com/bborbe/errors to v1.6.4, github.com/bborbe/kafka to v1.29.0, github.com/bborbe/sentry to v1.10.6, github.com/bborbe/vault-cli to v0.183.0, google.golang.org/genai to v1.76.0
+
 ## v0.1.15
 
 - chore: update Go to 1.27.3 and github.com/bborbe/agent to v0.114.0, github.com/bborbe/kafka to v1.28.5, github.com/bborbe/sentry to v1.10.5, github.com/bborbe/service to v1.11.1, github.com/bborbe/time to v1.27.18, github.com/bborbe/vault-cli to v0.177.0
