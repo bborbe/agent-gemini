@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## Unreleased
+
+- feat: build the image inside a cluster via `make build BUILD_TARGET=<cluster>`
+
 ## v0.1.17
 
 - chore: update github.com/bborbe/agent to v0.136.0, github.com/bborbe/cqrs to v0.6.15, github.com/bborbe/errors to v1.6.6, github.com/bborbe/kafka to v1.29.11, github.com/bborbe/sentry to v1.10.7, github.com/bborbe/service to v1.11.2, github.com/bborbe/time to v1.27.25, github.com/bborbe/vault-cli to v0.185.1, google.golang.org/genai to v1.77.0
