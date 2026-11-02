@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## Unreleased
+
+- fix: keep the existence probe's stderr out of the existence signal — a warning on a successful `kubectl get` (the client/server version-skew warning) was read as an existing Job and failed every build with a false message
+
 ## v0.2.1
 
 - fix: harden the cluster build runner — the namespace is read back from the rendered manifest instead of the environment, a kubectl error fails loudly instead of reading as an absent Job, `TIMEOUT` is parsed as base 10, `SOURCE_DATE_EPOCH` is covered by the newline rejection, both init containers drop all capabilities and cannot escalate, and `upload` / `clean` say they did nothing when `BUILD_TARGET` is not `local`
