@@ -76,6 +76,14 @@ spec:
             limits:
               cpu: "1"
               memory: 1Gi
+          # Hardened like any other container: the clone needs to write /src and
+          # /meta and nothing else, so it keeps no capability and cannot escalate.
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop: ["ALL"]
+            seccompProfile:
+              type: RuntimeDefault
           volumeMounts:
             - name: src
               mountPath: /src
@@ -104,6 +112,14 @@ spec:
             limits:
               cpu: "2"
               memory: 2Gi
+          # Same hardening as the clone: `go mod vendor` writes /src and the
+          # module cache, and needs no capability to do it.
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop: ["ALL"]
+            seccompProfile:
+              type: RuntimeDefault
           volumeMounts:
             - name: src
               mountPath: /src
