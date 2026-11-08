@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## Unreleased
+
+- chore: restate the do-not-merge contract in the gate workflow
+
 ## v0.2.2
 
 - fix: keep the existence probe's stderr out of the existence signal — a warning on a successful `kubectl get` (the client/server version-skew warning) was read as an existing Job and failed every build with a false message
