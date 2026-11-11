@@ -1,6 +1,6 @@
 module github.com/bborbe/agent-gemini
 
-go 1.27.3
+go 1.27.4
 
 require (
 	github.com/bborbe/agent v0.139.7
